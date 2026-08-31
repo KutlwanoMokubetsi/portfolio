@@ -535,6 +535,43 @@
   .bfs-cell.origin{ background:var(--accent); border-color:var(--accent); }
   .bfs-cell.lit{ background:var(--accent-soft); border-color:var(--accent); }
 
+  /* ---- More projects (compact grid) ---- */
+  .more-projects-head{
+    margin-top:48px;
+    padding-top:40px;
+    border-top:1px solid var(--hairline);
+  }
+  .more-projects-head h3{ font-size:1.3rem; font-weight:600; margin-bottom:6px; }
+  .more-projects-head p{ color:var(--text-muted); font-size:.92rem; margin:0; }
+  .more-projects{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:20px;
+  }
+  @media (max-width:760px){ .more-projects{ grid-template-columns:1fr; } }
+  .mini-project{
+    border:1px solid var(--hairline);
+    border-radius:6px;
+    padding:26px;
+    background:var(--bg-elevated);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    transition:border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+  }
+  .mini-project:hover{ border-color:var(--accent); transform:translateY(-2px); }
+  .mini-kicker{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:.68rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+  .mini-project h4{ font-size:1.1rem; font-weight:600; font-family:"Bricolage Grotesque", sans-serif; }
+  .mini-project p{ color:var(--text-muted); font-size:.92rem; }
+  .mini-project .tl-tags{ margin-top:2px; }
+
   /* ---- Skills ---- */
   .skills-grid{
     display:grid;
@@ -822,9 +859,9 @@
           <div class="project-copy">
             <div class="project-kicker">Personal project · Aug 2024 — Present</div>
             <h3>SafeSpot</h3>
-            <p>A Flutter/Dart mobile app that enhances personal safety by surfacing real-time information on crime hotspots and incidents. It uses geolocation to flag crime-prone areas nearby and surfaces detail on recent occurrences — including suspect and vehicle information — so people can plan safer routes before they need to.</p>
+            <p>A web app that maps crime hotspots and delivers real-time safety insight, with an interactive map view and live hotspot radars so people can see what's nearby and plan safer routes before they need to.</p>
             <div class="tl-tags">
-              <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Geolocation</span><span class="tag">Mobile</span>
+              <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">Vite</span>
             </div>
           </div>
         </article>
@@ -838,8 +875,68 @@
             <h3>WITS AI Snake Competition</h3>
             <p>Built an AI agent for a competitive multiplayer Snake game using breadth-first search for pathfinding — the same wavefront expansion animating alongside. Combined algorithmic problem-solving, game theory, and adaptive strategy to make real-time decisions under a moving board state.</p>
             <div class="tl-tags">
-              <span class="tag">Python</span><span class="tag">BFS / Pathfinding</span><span class="tag">Game AI</span>
+              <span class="tag">Java</span><span class="tag">BFS / Pathfinding</span><span class="tag">Game AI</span>
             </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="more-projects-head reveal">
+        <h3>More builds</h3>
+        <p>Smaller and in-progress projects from my GitHub.</p>
+      </div>
+      <div class="more-projects">
+        <article class="mini-project reveal">
+          <div class="mini-kicker">Personal project</div>
+          <h4>PSL Kickstart</h4>
+          <p>A fantasy football app for South Africa's Premier Soccer League — pick a squad, track live standings, and compete with friends over a season.</p>
+          <div class="tl-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span>
+          </div>
+        </article>
+
+        <article class="mini-project reveal">
+          <div class="mini-kicker">MERN-stack concept</div>
+          <h4>Codexa</h4>
+          <p>An event-planning platform for managing events, guests, and vendors end-to-end — a completed React/TypeScript frontend prototype with a documented MongoDB/Express backend architecture.</p>
+          <div class="tl-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">MongoDB</span>
+          </div>
+        </article>
+
+        <article class="mini-project reveal">
+          <div class="mini-kicker">Team project</div>
+          <h4>ConstiFind</h4>
+          <p>A searchable web platform with a public search interface, tiered admin dashboards, and a documented API — built collaboratively with a fellow developer.</p>
+          <div class="tl-tags">
+            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">REST API</span><span class="tag">Azure</span>
+          </div>
+        </article>
+
+        <article class="mini-project reveal">
+          <div class="mini-kicker">Concept project</div>
+          <h4>Campus Safety Reporting Platform</h4>
+          <p>A concept platform for confidential campus safety reporting — giving students a private channel to report incidents and reach support resources.</p>
+          <div class="tl-tags">
+            <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Supabase</span>
+          </div>
+        </article>
+
+        <article class="mini-project reveal">
+          <div class="mini-kicker">Personal project</div>
+          <h4>Private Logistics Hub</h4>
+          <p>A private, PIN-protected coordination tool for organising shared logistics within a small group — contributions and costs, tasks, contacts, and shared documents, with a full audit history.</p>
+          <div class="tl-tags">
+            <span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">PWA</span>
+          </div>
+        </article>
+
+        <article class="mini-project reveal">
+          <div class="mini-kicker">Personal project</div>
+          <h4>Lottery RNG Statistical Analysis</h4>
+          <p>A statistical analysis tool exploring pseudorandom number generator patterns and entropy in historical lottery draw data — applied statistics and data visualisation rather than prediction.</p>
+          <div class="tl-tags">
+            <span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">Data Analysis</span>
           </div>
         </article>
       </div>
@@ -856,13 +953,13 @@
         <div class="skill-group reveal">
           <h3>Languages</h3>
           <div class="skill-tags">
-            <span class="tag">Java</span><span class="tag">Python</span><span class="tag">C++</span><span class="tag">Dart (Flutter)</span>
+            <span class="tag">Java</span><span class="tag">Python</span><span class="tag">C++</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Dart (Flutter)</span>
           </div>
         </div>
         <div class="skill-group reveal">
           <h3>Technical</h3>
           <div class="skill-tags">
-            <span class="tag">Software Development</span><span class="tag">Artificial Intelligence</span><span class="tag">Mobile App Development</span><span class="tag">Algorithms &amp; Data Structures</span><span class="tag">BFS / Pathfinding</span>
+            <span class="tag">Software Development</span><span class="tag">Artificial Intelligence</span><span class="tag">Full-Stack Web Development</span><span class="tag">Mobile App Development</span><span class="tag">Algorithms &amp; Data Structures</span><span class="tag">BFS / Pathfinding</span>
           </div>
         </div>
         <div class="skill-group reveal">
@@ -874,7 +971,7 @@
         <div class="skill-group reveal">
           <h3>Tools &amp; platforms</h3>
           <div class="skill-tags">
-            <span class="tag">Git</span><span class="tag">Android / Flutter</span><span class="tag">Remote Collaboration</span>
+            <span class="tag">Git</span><span class="tag">React / Next.js</span><span class="tag">Node.js</span><span class="tag">Supabase</span><span class="tag">MongoDB</span><span class="tag">Tailwind CSS</span><span class="tag">Android / Flutter</span><span class="tag">Azure</span><span class="tag">Remote Collaboration</span>
           </div>
         </div>
       </div>
